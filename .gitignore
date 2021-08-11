@@ -1,0 +1,12 @@
+﻿*bin/
+*obj/
+*packages/
+*.suo
+*.user
+*.userprefs
+*_ReSharper.*
+*.ReSharper.user
+*.resharper.user
+*.idea/
+*.vs/
+*.vscode/
