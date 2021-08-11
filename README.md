@@ -75,4 +75,4 @@ namespace EquatableSourceGenerator.Sample.Models
     }
 }
 ```
-~~~~</div>
+</div>
