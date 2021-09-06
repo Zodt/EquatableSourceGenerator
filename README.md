@@ -60,8 +60,8 @@ namespace EquatableSourceGenerator.Sample.Models
         public override int GetHashCode()
         {
             HashCode hashCode = new();
-			/*&& hashCode will add all your properties*/;
-			return hashCode.ToHashCode();
+	    /*&& hashCode will add all your properties*/;
+	    return hashCode.ToHashCode();
         }
 
         public static bool operator == (DummyModel? self, DummyModel? other)
