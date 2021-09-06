@@ -34,7 +34,7 @@ public partial class DummyModel : IEqutable<DummyModel>
 }
 ```
 <h5>
-    The `EquatableSourceGenerator` will generate a partial class of `DummyModel`. It will tike that:
+    The `EquatableSourceGenerator` will generate a partial class of `DummyModel`. It will like that:
 </h5>
 
 ```csharp
