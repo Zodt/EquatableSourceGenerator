@@ -8,6 +8,5 @@ namespace EquatableSourceGenerator.Sample.Models
         public bool IsActive { get; init; }
         public string? DummyName { get; init; }
         public AnotherDummyModel? Model { get; init; }
-        
     }
 }

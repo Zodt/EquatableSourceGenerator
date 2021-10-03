@@ -9,7 +9,7 @@ namespace EquatableSourceGenerator
     {
         private readonly ITypeSymbol _typeSymbol;
         private static readonly Regex FieldRegex = new(@"(?>.*\<)(?<FieldName>.*)\>");
-        
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public EquatableCodeCreator(ITypeSymbol typeSymbol)
         {
@@ -69,7 +69,7 @@ namespace {_typeSymbol.ContainingNamespace}
 
             return builder.Append($"{tabulation}return hashCode.ToHashCode();").ToString();
         }
-        
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private string GeneratePropertiesForEquals()
         {

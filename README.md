@@ -33,7 +33,7 @@ public partial class DummyModel : IEqutable<DummyModel>
     //Your properties
 }
 ```
-<h5>
+<h5 align="center">
     The `EquatableSourceGenerator` will generate a partial class of `DummyModel`. It will like that:
 </h5>
 

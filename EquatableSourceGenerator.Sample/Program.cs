@@ -9,7 +9,17 @@ namespace EquatableSourceGenerator.Sample
         {
             var dateTime = DateTime.UtcNow;
             var dummyModel = GetDummyModel(dateTime);
-            var dummyModel1 = GetDummyModel(dateTime);
+            var dummyModel1 = new DummyModel
+            {
+                Id = 4,
+                IsActive = true,
+                DummyName = nameof(DummyModel),
+                Model = new AnotherDummyModel
+                {
+                    Id = 1,
+                    CreationDate = dateTime
+                }
+            };
 
             Console.WriteLine(dummyModel.Equals(dummyModel1));
             Console.WriteLine(dummyModel.GetHashCode());
@@ -23,7 +33,7 @@ namespace EquatableSourceGenerator.Sample
                 DummyName = nameof(DummyModel),
                 Model = new AnotherDummyModel
                 {
-                    Id = 5,
+                    Id = 1,
                     CreationDate = dateTime
                 }
             };
