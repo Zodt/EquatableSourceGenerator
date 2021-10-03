@@ -22,6 +22,7 @@ namespace EquatableSourceGenerator.Sample
             };
 
             Console.WriteLine(dummyModel.Equals(dummyModel1));
+            Console.WriteLine(dummyModel.Model?.GetHashCode());
             Console.WriteLine(dummyModel.GetHashCode());
         }
         private static DummyModel GetDummyModel(DateTime dateTime)

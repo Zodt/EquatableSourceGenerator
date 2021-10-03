@@ -1,8 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator", "EquatableSourceGenerator\EquatableSourceGenerator.csproj", "{9001D6A5-A38D-492F-9591-07C0F81165B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator", "Src\EquatableSourceGenerator\EquatableSourceGenerator.csproj", "{9001D6A5-A38D-492F-9591-07C0F81165B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator.Sample", "EquatableSourceGenerator.Sample\EquatableSourceGenerator.Sample.csproj", "{EDDC8CA1-FAEC-4F45-8B50-7CC4EA606949}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator.Sample", "Samples\EquatableSourceGenerator.Sample\EquatableSourceGenerator.Sample.csproj", "{EDDC8CA1-FAEC-4F45-8B50-7CC4EA606949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator.InterfaceImplementationSample", "Samples\EquatableSourceGenerator.InterfaceImplementationSample\EquatableSourceGenerator.InterfaceImplementationSample.csproj", "{65234E1C-D177-4382-82A9-47E66B75A611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator.ClassAggregationSample", "Samples\EquatableSourceGenerator.ClassAggregationSample\EquatableSourceGenerator.ClassAggregationSample.csproj", "{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{3187FF04-A9F0-42EE-85C7-B68F5F89CC33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +24,18 @@ Global
 		{EDDC8CA1-FAEC-4F45-8B50-7CC4EA606949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDC8CA1-FAEC-4F45-8B50-7CC4EA606949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDC8CA1-FAEC-4F45-8B50-7CC4EA606949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65234E1C-D177-4382-82A9-47E66B75A611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65234E1C-D177-4382-82A9-47E66B75A611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65234E1C-D177-4382-82A9-47E66B75A611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65234E1C-D177-4382-82A9-47E66B75A611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F} = {3187FF04-A9F0-42EE-85C7-B68F5F89CC33}
+		{65234E1C-D177-4382-82A9-47E66B75A611} = {3187FF04-A9F0-42EE-85C7-B68F5F89CC33}
+		{EDDC8CA1-FAEC-4F45-8B50-7CC4EA606949} = {3187FF04-A9F0-42EE-85C7-B68F5F89CC33}
 	EndGlobalSection
 EndGlobal

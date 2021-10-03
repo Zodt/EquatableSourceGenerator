@@ -5,6 +5,12 @@
         <TargetFramework>net5.0</TargetFramework>
         <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
+
+<!--
+        &lt;!&ndash;Generate files&ndash;&gt;
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>SourceGeneratorFiles</CompilerGeneratedFilesOutputPath>
+-->
     </PropertyGroup>
 
     <ItemGroup>
