@@ -1,3 +1,4 @@
+<H1 align="center">Warning: This project is proof of concept. </H1>
 <div>
      <p align="center">
           <a href="LICENSE.md">
@@ -17,8 +18,6 @@
      <h4 align="center">
           The `EquatableSourceGenerator` is a simple generator that implements the implementation of the interface IEquatable`1 in a partial class
      </h4>
-     <H1 align="center">Warning</H1>	
-     This project is proof of concept. 
 </div>
 <h1> </h1>
 <div>
