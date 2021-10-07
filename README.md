@@ -17,6 +17,8 @@
      <h4 align="center">
           The `EquatableSourceGenerator` is a simple generator that implements the implementation of the interface IEquatable`1 in a partial class
      </h4>
+     <H1 align="center">Warning</H1>	
+     This project is proof of concept. 
 </div>
 <h1> </h1>
 <div>
