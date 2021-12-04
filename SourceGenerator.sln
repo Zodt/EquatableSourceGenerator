@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator.Cl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{3187FF04-A9F0-42EE-85C7-B68F5F89CC33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquatableSourceGenerator.Test", "Tests\EquatableSourceGenerator.Test\EquatableSourceGenerator.Test.csproj", "{5B23893C-6038-4711-ABF5-1CFD62A0E972}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B23893C-6038-4711-ABF5-1CFD62A0E972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B23893C-6038-4711-ABF5-1CFD62A0E972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B23893C-6038-4711-ABF5-1CFD62A0E972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B23893C-6038-4711-ABF5-1CFD62A0E972}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{10A30D6E-BA5C-4B1E-8D01-0A8F0925803F} = {3187FF04-A9F0-42EE-85C7-B68F5F89CC33}
