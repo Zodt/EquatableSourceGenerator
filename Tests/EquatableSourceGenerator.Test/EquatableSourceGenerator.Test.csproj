@@ -35,12 +35,6 @@
     <ItemGroup>
         <Compile Include="..\..\Models\*.cs" Link="*.cs" CopyToOutputDirectory="Always" />
         <Compile Update="Models\*.cs" CopyToOutputDirectory="Always" />
-        <Compile Update="Models\AnotherDummyModel.Generated.cs">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Compile>
-        <Compile Update="Models\SimpleModel.Generated.cs">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </Compile>
     </ItemGroup>
     
 </Project>
