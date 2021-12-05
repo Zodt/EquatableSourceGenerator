@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -75,6 +73,7 @@ namespace EquatableSourceGenerator
                 return;
             }
 
+            // ReSharper disable once ForCanBeConvertedToForeach
             for (var i = 0; i < namespaceDeclarationSyntax.Members.Count; i++)
             {
                 switch (namespaceDeclarationSyntax.Members[i])
