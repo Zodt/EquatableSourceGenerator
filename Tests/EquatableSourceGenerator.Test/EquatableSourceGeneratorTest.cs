@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-using System.Reflection;
+﻿using System.Linq;
 using EquatableSourceGenerator.Test.DataGenerators;
 using EquatableSourceGenerator.Test.Helpers;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -29,12 +23,15 @@ namespace EquatableSourceGenerator.Test
         public void GenerateIEquatableMethods_IsSuccess(string declared, string generated, string dataName)
         {
             _output.WriteLine(dataName);
+
+            var generatedCode = SyntaxTreeGenerator.ParseText(generated).ToString().Trim();
+            var expected = SyntaxTreeGenerator.RemoveComments(generatedCode);
             
-            SyntaxTree expectedTree = CSharpSyntaxTree.ParseText(generated);
             var generatedTrees = SyntaxTreeGenerator.GetGeneratedSyntaxTreesByDeclaredType(declared, out var generatorDiags);
-            
+            var actual = SyntaxTreeGenerator.CastGeneratedSyntaxTreesToString(generatedTrees);
+
             Assert.Empty(generatorDiags);
-            Assert.Equal(expectedTree.ToString().Trim(), generatedTrees.CastGeneratedSyntaxTreesToString());
+            Assert.Equal(expected, actual);
         }
     }
 }

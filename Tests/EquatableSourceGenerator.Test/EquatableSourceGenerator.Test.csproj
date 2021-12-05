@@ -4,6 +4,7 @@
         <TargetFramework>net5.0</TargetFramework>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -31,4 +32,15 @@
         <ProjectReference Include="..\..\Src\EquatableSourceGenerator\EquatableSourceGenerator.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Compile Include="..\..\Models\*.cs" Link="*.cs" CopyToOutputDirectory="Always" />
+        <Compile Update="Models\*.cs" CopyToOutputDirectory="Always" />
+        <Compile Update="Models\AnotherDummyModel.Generated.cs">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Compile>
+        <Compile Update="Models\SimpleModel.Generated.cs">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Compile>
+    </ItemGroup>
+    
 </Project>

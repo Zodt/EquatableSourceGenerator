@@ -1,8 +1,9 @@
 ﻿using System;
 
-namespace EquatableSourceGenerator.Test.Models
+// ReSharper disable CheckNamespace
+namespace EquatableSourceGenerator.Test.Models.DummyModel
 {
-    public partial class DummyModel : IEquatable<DummyModel>
+    public partial class DummyModel : IEquatable<DummyModel?>
     {
         public Guid Id { get; init; }
         public bool IsActive { get; init; }

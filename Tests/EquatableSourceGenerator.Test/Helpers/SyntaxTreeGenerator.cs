@@ -2,6 +2,7 @@
 using System.Collections.Immutable;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
@@ -16,20 +17,27 @@ namespace EquatableSourceGenerator.Test.Helpers
             return newComp.RemoveSyntaxTrees(comp.SyntaxTrees).SyntaxTrees.ToImmutableArray();
         }
 
-        /*public static SyntaxTree ParseText()
+        public static SyntaxTree ParseText(string generated)
         {
             return CSharpSyntaxTree.ParseText(generated, new CSharpParseOptions(LanguageVersion.Preview));
-        }*/
+        }
 
-        public static string? CastGeneratedSyntaxTreesToString(this ImmutableArray<SyntaxTree> generatedTrees)
+        public static string CastGeneratedSyntaxTreesToString(ImmutableArray<SyntaxTree> generatedTrees)
         {
-            return generatedTrees.Aggregate(string.Empty,
-                (x, y) => $"{x.Trim()}{Environment.NewLine}{y.ToString().Trim()}").Trim();
+            var aggregate = string(string x, SyntaxTree y) => $"{x.Trim()}{Environment.NewLine}{y.ToString().Trim()}";
+            var generatedCode = generatedTrees.Aggregate(string.Empty, aggregate);
+            return RemoveComments(generatedCode);
+        }
+        public static string RemoveComments(string generatedCode)
+        {
+            var correctedCode = generatedCode.Replace("\t", "   ").Trim();
+            var removeComments = Regex.Replace(correctedCode, @"[\/\\*]{2}.*[\/\\*]{2}", string.Empty);
+            return removeComments;
         }
 
         private static Compilation CreateCompilation(string source, OutputKind outputKind = OutputKind.ConsoleApplication)
             => CSharpCompilation.Create("compilation",
-                new[] { CSharpSyntaxTree.ParseText(source, new CSharpParseOptions(LanguageVersion.Preview)) },
+                new[] { ParseText(source) },
                 new[] { MetadataReference.CreateFromFile(typeof(Binder).GetTypeInfo().Assembly.Location) },
                 new CSharpCompilationOptions(outputKind));
 
