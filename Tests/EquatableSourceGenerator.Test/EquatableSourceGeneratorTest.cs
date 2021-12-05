@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using EquatableSourceGenerator.Test.DataGenerators;
+﻿using EquatableSourceGenerator.Test.DataGenerators;
 using EquatableSourceGenerator.Test.Helpers;
 using Xunit;
 using Xunit.Abstractions;

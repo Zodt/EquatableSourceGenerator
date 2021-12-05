@@ -7,7 +7,7 @@ namespace EquatableSourceGenerator.Test.Models.AnotherDummyModel
         public bool Equals(AnotherDummyModel? other)
         {
             return other is not null 
-               && Id == other.Id
+               && Id == other.Id/* ToDo: не работают отступы как надо*/
                && CreationDate == other.CreationDate;
         }
         public override bool Equals(object? obj)
@@ -16,12 +16,12 @@ namespace EquatableSourceGenerator.Test.Models.AnotherDummyModel
             if (ReferenceEquals(this, obj)) return true;
             
             return obj.GetType() == this.GetType() 
-                || obj is AnotherDummyModel self && Equals(self);
+                || obj is AnotherDummyModel self && Equals(self);/* ToDo: не работают отступы как надо*/
         }
         public override int GetHashCode()
         {
             HashCode hashCode = new();
-         hashCode.Add<int>(Id);
+         hashCode.Add<int>(Id);/* ToDo: не работают отступы как надо*/
          hashCode.Add<System.DateTime?>(CreationDate);
          return hashCode.ToHashCode();
         }

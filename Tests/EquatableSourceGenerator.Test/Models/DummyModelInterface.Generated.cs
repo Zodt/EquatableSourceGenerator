@@ -7,7 +7,7 @@ namespace EquatableSourceGenerator.Test.Models.DummyInterface
         public bool Equals(DummyModelInterface? other)
         {
             return other is not null 
-               && PrimaryKey == other.PrimaryKey
+               && PrimaryKey == other.PrimaryKey/* ToDo: не работают отступы как надо*/
                && ForeignKey == other.ForeignKey;
         }
         public bool Equals(EquatableSourceGenerator.Test.Models.DummyInterface.IDummyInterface? other)/* ToDo: Не генерируется */

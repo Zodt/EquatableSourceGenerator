@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;/* ToDo: Убрать using */
 
 namespace EquatableSourceGenerator.Test.Models.SimpleModel
 {

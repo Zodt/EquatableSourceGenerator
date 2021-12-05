@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;/* ToDo: Убрать using */
 
 namespace EquatableSourceGenerator.Test.Models.DummyModel
 {
@@ -9,8 +9,8 @@ namespace EquatableSourceGenerator.Test.Models.DummyModel
             return other is not null 
                && Id == other.Id/* ToDo: не работают отступы как надо*/
                && IsActive == other.IsActive
-               && DummyName == other.DummyName
-               && CreationDate == other.CreationDate;
+               && DummyName == other.DummyName/* ToDo: не генерируется сравнение через Nullable.Equals*/
+               && CreationDate == other.CreationDate/* ToDo: не генерируется сравнение через Nullable.Equals*/;
         }
         public override bool Equals(object? obj)
         {
@@ -22,7 +22,7 @@ namespace EquatableSourceGenerator.Test.Models.DummyModel
         }
         public override int GetHashCode()
         {
-            HashCode hashCode = new();
+            HashCode hashCode = new();/* ToDo: Заменить на System.HashCode */
          hashCode.Add<System.Guid>(Id);/* ToDo: не работают отступы как надо*/
          hashCode.Add<bool>(IsActive);
          hashCode.Add<string?>(DummyName);
